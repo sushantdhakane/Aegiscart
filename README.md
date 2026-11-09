@@ -1,6 +1,6 @@
 # AegisCart — Bounded Agentic Checkout for Razorpay
 
-**Track 01: AI Growth & Agentic Commerce.** *"We do not give an AI agent a wallet. We give it a
+*"We do not give an AI agent a wallet. We give it a
 narrowly scoped, expiring, explainable authority to prepare a purchase — and a deterministic
 payment system validates every commitment."*
 
