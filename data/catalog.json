@@ -1,0 +1,52 @@
+{
+  "merchant": {
+    "id": "mer_kadai_snacks_001",
+    "name": "Kadai & Co. — D2C Snacks and Gifting",
+    "category": "food_and_gifting",
+    "return_policy": "7-day return on unopened packaged items; perishables are non-returnable.",
+    "delivery_promise_days": 3
+  },
+  "catalog_version": "cat_v42",
+  "catalog_generated_at": "2026-08-20T10:00:00Z",
+  "skus": [
+    { "id": "SKU-ROAST-ALMD-200", "title": "Roasted Almonds, 200g", "category": "protein_snack", "price_paise": 34900, "stock": 48, "tags": ["high-protein", "snack", "under-500"] },
+    { "id": "SKU-PROT-BAR-6PK", "title": "Whey Protein Bars, Box of 6", "category": "protein_snack", "price_paise": 44900, "stock": 30, "tags": ["high-protein", "snack", "under-500"] },
+    { "id": "SKU-ROAST-CHNA-250", "title": "Roasted Chana, 250g", "category": "protein_snack", "price_paise": 12900, "stock": 60, "tags": ["high-protein", "snack", "under-500", "budget"] },
+    { "id": "SKU-MIX-TRAIL-300", "title": "Trail Mix (Nuts + Seeds), 300g", "category": "protein_snack", "price_paise": 39900, "stock": 40, "tags": ["high-protein", "snack", "under-500"] },
+    { "id": "SKU-GIFT-HAMPER-A", "title": "Festive Gifting Hamper — Classic", "category": "gifting", "price_paise": 179900, "stock": 15, "tags": ["gift", "under-2000"] },
+    { "id": "SKU-GIFT-HAMPER-B", "title": "Festive Gifting Hamper — Premium", "category": "gifting", "price_paise": 249900, "stock": 10, "tags": ["gift"] },
+    { "id": "SKU-CHOCO-BOX-12", "title": "Assorted Chocolate Box, 12pc", "category": "gifting", "price_paise": 59900, "stock": 25, "tags": ["gift", "under-2000", "under-500"] },
+    { "id": "SKU-TEA-GIFT-SET", "title": "Artisan Tea Gift Set", "category": "gifting", "price_paise": 89900, "stock": 20, "tags": ["gift", "under-2000"] },
+    { "id": "SKU-MUG-CERAMIC", "title": "Hand-glazed Ceramic Mug", "category": "gifting_addon", "price_paise": 34900, "stock": 55, "tags": ["gift", "addon"] },
+    { "id": "SKU-GIFTWRAP", "title": "Premium Gift Wrap + Card", "category": "addon", "price_paise": 9900, "stock": 999, "tags": ["addon"] }
+  ],
+  "promotions": [
+    {
+      "id": "bundle-mug-v2",
+      "type": "cross_sell",
+      "trigger_category": "gifting",
+      "offer_sku": "SKU-MUG-CERAMIC",
+      "discount_percent": 20,
+      "pitch": "Add a hand-glazed mug to your gift at 20% off"
+    },
+    {
+      "id": "gift-wrap-v1",
+      "type": "cross_sell",
+      "trigger_category": "gifting",
+      "offer_sku": "SKU-GIFTWRAP",
+      "discount_percent": 0,
+      "pitch": "Add premium gift wrap + card for ₹99"
+    },
+    {
+      "id": "bundle-protein-v1",
+      "type": "upsell",
+      "trigger_category": "protein_snack",
+      "offer_sku": "SKU-MIX-TRAIL-300",
+      "discount_percent": 15,
+      "pitch": "Bundle a trail mix at 15% off to hit your protein goals"
+    }
+  ],
+  "tax": { "gst_percent": 5 },
+  "delivery_fee_paise": 4900,
+  "free_delivery_threshold_paise": 99900
+}

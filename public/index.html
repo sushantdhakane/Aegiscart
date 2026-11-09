@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AegisCart — Bounded Agentic Checkout</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="app">
+
+  <header class="header">
+    <div class="wordmark"><span class="tick">◆</span> AegisCart</div>
+    <div class="header-meta">
+      <span id="merchantName">Kadai &amp; Co.</span>
+      <span id="agentBadge" class="mode-badge" style="display:none"></span>
+      <span id="modeBadge" class="mode-badge">checking mode…</span>
+      <button id="killSwitchBtn" class="btn secondary" style="padding:6px 12px;font-size:11px;border-color:#7e9d95;color:#d7ebe3">⏻ Pause checkouts</button>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <!-- PAPER SIDE: give the agent a goal, watch it work, approve the result -->
+    <main class="paper-side">
+      <p class="section-eyebrow">Goal → Plan → Quote → Policy → Approve → Pay</p>
+      <h1 class="section-title">Tell the agent what to buy</h1>
+
+      <div class="ask-row">
+        <input id="goalInput" class="ask-input" type="text" maxlength="300" placeholder="e.g. a high-protein snack under ₹500" />
+        <button id="runBtn" class="btn seal">Run agent</button>
+      </div>
+
+      <div class="chips" id="chips">
+        <button class="chip" data-goal="a high-protein snack under ₹500">High-protein snack under ₹500</button>
+        <button class="chip" data-goal="a birthday gift under ₹2000">Birthday gift under ₹2000</button>
+        <button class="chip" data-goal="buy 20 roasted almonds">Buy 20 roasted almonds</button>
+        <button class="chip" data-goal="buy 5 festive hampers">Buy 5 festive hampers</button>
+        <button class="chip" data-goal="a gift under ₹100">Gift under ₹100</button>
+      </div>
+
+      <label class="offers-toggle">
+        <input type="checkbox" id="allowOffers" checked />
+        Let the agent add merchant-approved offers (cross-sells) when they fit the budget
+      </label>
+      <p class="hint">The agent plans and prepares the whole purchase by itself. It has no payment access: you approve the final cart.</p>
+
+      <div id="traceArea"></div>
+      <div id="mandateArea"></div>
+
+      <details class="catalog-details">
+        <summary>What the agent can see: the merchant catalog</summary>
+        <div id="catalogGrid" class="catalog-grid"></div>
+      </details>
+    </main>
+
+    <!-- TERMINAL SIDE: live, hash-chained audit ledger -->
+    <aside class="terminal-side">
+      <p class="section-eyebrow">Every money action, explained</p>
+      <h1 class="section-title">Audit ledger</h1>
+      <div id="chainBadge" class="chain-badge"><span class="dot"></span> verifying chain…</div>
+      <div id="ledgerTape" class="ledger-tape">
+        <p class="empty-state">No events yet. Run the agent on the left to begin.</p>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
