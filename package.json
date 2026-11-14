@@ -1,13 +1,14 @@
 {
   "name": "aegiscart",
   "version": "0.1.0",
-  "description": "AegisCart — a bounded, auditable agentic checkout gateway for Razorpay (Buildathon Track 01: AI Growth & Agentic Commerce)",
+  "description": "AegisCart \u2014 a bounded, auditable agentic checkout gateway for Razorpay (Buildathon Track 01: AI Growth & Agentic Commerce)",
   "main": "server.js",
   "type": "commonjs",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js",
-    "test": "node test/run-demo.js"
+    "dev": "npm --prefix web run dev",
+    "test": "node test/run-demo.js",
+    "prestart": "npm --prefix web run build"
   },
   "dependencies": {
     "cors": "^2.8.5",
